@@ -1,9 +1,9 @@
 
 
 class Node {
-    constructor(value=null) {
+    constructor(value=null, next=null) {
         this.value = value;
-        this.next = null;
+        this.next = next;
     }
 }
 let node = new Node();
@@ -32,8 +32,7 @@ class LinkedList {
             this.head = new Node(value);
         } else {
             let list = this.head;
-            this.head = new Node(value);
-            this.head.next = list;
+            this.head = new Node(value, list);
         }
     }
 
@@ -200,16 +199,17 @@ list.append(5);
 list.append(1);
 list.append(10);
 list.prepend(50);
+console.log(list);
 console.log(list.size());
 // console.log(list.listHead());
 // console.log(list.at(1));
 // console.log(list.pop());
 // console.log(list.pop());
-console.log(list.toString());
+// console.log(list.toString());
 // console.log(list.contains(3));
-list.insertAt(7, 20);
-console.log(list.size());
-list.insertAt(0, 5);
-console.log(list.toString());
-list.removeAt(7)
-console.log(list.toString());
+// list.insertAt(7, 20);
+// console.log(list.size());
+// list.insertAt(0, 5);
+// console.log(list.toString());
+// list.removeAt(7)
+// console.log(list.toString());
