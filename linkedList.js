@@ -133,8 +133,7 @@ class LinkedList {
         let tailValues = [];
         this.head = null;
         if (index === 0) {
-            this.head = new Node(value);
-            return this.head.next = list;
+            return this.head = new Node(value, list);
         };
         while(list.next !== null) {
             if (list.value === tail.value) {
@@ -167,8 +166,7 @@ class LinkedList {
         this.head = null;
         if (index === 0) {
             let value = list.next.value;
-            this.head = new Node(value);
-            return this.head.next = list.next.next;
+            return this.head = new Node(value, list.next.next);
         };
         while(list.next !== null) {
             if (list.value === tail.value) {
@@ -200,16 +198,17 @@ list.append(1);
 list.append(10);
 list.prepend(50);
 console.log(list);
-console.log(list.size());
-// console.log(list.listHead());
-// console.log(list.at(1));
-// console.log(list.pop());
-// console.log(list.pop());
-// console.log(list.toString());
-// console.log(list.contains(3));
-// list.insertAt(7, 20);
 // console.log(list.size());
-// list.insertAt(0, 5);
-// console.log(list.toString());
-// list.removeAt(7)
-// console.log(list.toString());
+// console.log(list.listHead());
+// console.log(list.tail());
+console.log(list.at(1));
+// console.log(list.pop());
+// console.log(list.pop());
+console.log(list.toString());
+// console.log(list.contains(3));
+list.insertAt(7, 20);
+console.log(list.size());
+list.insertAt(0, 5);
+console.log(list.toString());
+list.removeAt(6)
+console.log(list.toString());
